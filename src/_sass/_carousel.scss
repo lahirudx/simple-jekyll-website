@@ -1,0 +1,43 @@
+.carouselbox {
+  position: relative;
+  display: inline-block;
+  width: 260px;
+  height: 366px;
+  overflow: hidden;
+  @media only screen and (min-width: $on-tablet) {
+    width: 420px;
+    height: 590px;
+  }
+  @media only screen and (min-width: $on-desktop) {
+    width: 603px;
+    height: 848px;
+  }
+  .ipad{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    li {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;      
+    }
+    .current {
+      opacity: 1;
+      transition: 1s;
+    }
+  }  
+}

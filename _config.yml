@@ -1,0 +1,34 @@
+# If you change this file, please restart the server process.
+
+# Global configuration
+exclude: [README.md, 'node_modules']
+
+# Site settings
+title: This is the title of the webiste. 
+email: hello@ticidesign.com
+description: Lorem ipsum dolor sit amet, mea iudico veritus no, affert disputationi vel ex, an dolore fastidii singulis nam. Ea illum tation scaevola eos, sed in cetero aliquam dolorum.
+keywords: Customer experience, data driven, marketing, email, below the line, data analytics, customer journey, customer experience map, customer journey mapping, customer relationship management, strategy, marketing technology, marketing automation, nurture program, loyalty program, lifecycle marketing, engagement program, Marketo, Eloqua, Adobe Campaign, Exact Target, Salesforce, CX, CX agency, persona development, customer profiling, marketing dashboard, digital marketing, digital advertising, analytics dashboard.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+
+# Build settings
+destination: public
+source: src
+# markdown: kramdown
+# gems:
+#   - jekyll-feed
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+
+
+#Defaul locations
+locations:
+# Path to prefix in front of absolute links
+  pathPrefix: "/"
+# Location of all static images used in CSS and on staic pages
+  images: "/img/"
+# Location of CSS files
+  css: "/css/"
+# Location of JS files
+  js: "/js/"

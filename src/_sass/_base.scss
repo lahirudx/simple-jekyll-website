@@ -1,0 +1,118 @@
+/* Reset some basic elements */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+  font-family: $base-font-family;
+  font-weight: 300;
+  font-size: $mobile-font-size;
+  line-height: $base-line-height;
+  color: $text-color;
+  background-color: $background-light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+  transition: all 0.3s ease-in-out;
+  @media only screen and (min-width: $on-mobile) {
+    font-size: $base-font-size;
+  }  
+}
+
+img {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  &:hover {
+      color: white;
+      text-decoration: none;
+  }
+}
+
+h1, h2, h3, h4 {
+  font-family: $base-font-family;
+  color: $text-color;
+  line-height: 1.5em;
+}
+
+h1 {
+  font-family: $base-font-family;
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin-bottom: 22px;
+  @media only screen and (min-width: $on-mobile) {
+    font-size: 33px;
+    line-height: 33px;
+    margin-bottom: 45px;
+  }
+  
+}
+
+h4 {
+  font-weight: 300;
+  margin-bottom: 1.5em;
+}
+p {
+  margin-bottom: 1em;
+  line-height: 26px;
+  color: #585858;
+  @media only screen and (min-width: $on-mobile) {
+    margin-bottom: 0.5em;
+    line-height: $base-line-height;
+  }
+}
+
+body.work p {
+  margin-bottom: 2em;
+}
+
+strong {
+  font-family: $base-font-family;
+  font-weight: 700;
+}
+
+ul {
+  padding: 0 4em;
+}
+
+figure {
+  position: relative;
+  display: block;
+  max-width: 100%;
+}
+
+figcaption {
+  text-align: center;
+  margin: 2em;
+  font-size: 15px;
+  @media only screen and (min-width: $on-mobile) {
+    font-size: $mobile-font-size;
+  }
+  &.nomargin {
+    margin: 0;
+  }
+}

@@ -1,0 +1,29 @@
+{% assign current = page.url | downcase | split: '/' %}
+<header>
+
+  <div class="header-wrapper">
+
+    <div class="header-logo">
+      <a href="/">
+        <img src="img/logo.svg" alt="Logo">
+      </a>
+    </div>
+
+    <div class="circle"></div>
+    <nav class="menu">   
+      <ul>
+        <li{% if page.id == "about" %} class="active"{% endif %}><a data-scroll href="/#about">About</a></li>
+        <li{% if page.id == "work" %} class="active"{% endif %}><a data-scroll href="/#work">Work</a></li>
+        <li{% if page.id == "people" %} class="active"{% endif %}><a data-scroll href="/#people">People</a></li>
+        <li{% if page.id == "culture" %} class="active"{% endif %}><a data-scroll href="/#culture">Culture</a></li>
+        <li{% if page.id == "contact" %} class="active"{% endif %}><a data-scroll href="/#contact">Contact</a></li>
+      </ul>     
+    </nav>
+
+    <div class="mobile-menu">
+      <div class="bar"></div>	
+    </div>
+
+  </div>
+
+</header>

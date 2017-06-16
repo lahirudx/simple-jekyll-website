@@ -1,0 +1,33 @@
+variables:
+  BUCKET_STAGING: staging.lidaaustralia.com.au
+  BUCKET_LIVE: lidaaustralia.com.au
+
+stages:
+  - deploy_staging
+  - deploy_live
+
+deploy_to_aws_s3_staging:
+  script:
+    - bundle install
+    - bundle exec jekyll build
+    - cd public
+    - aws s3 sync . s3://$BUCKET_STAGING --region ap-southeast-2 --exclude ".*" --exclude "README.md" --cache-control no-cache
+  stage: deploy_staging
+  only:
+    - master
+  tags:
+    - awscli
+    - jekyll
+
+deploy_to_aws_s3_live:
+  script:
+    - bundle install
+    - bundle exec jekyll build
+    - cd public
+    - aws s3 sync . s3://$BUCKET_LIVE --region ap-southeast-2 --exclude ".*" --exclude "README.md" --cache-control no-cache
+  stage: deploy_live
+  only:
+    - tags
+  tags:
+    - awscli
+    - jekyll

@@ -1,0 +1,86 @@
+---
+layout: default
+description: Work description.
+id: work
+jsarr: js/work.js
+---
+<section class="work_header">
+  <div class="wrapper fadeInUp animated">
+    <h2>Work<br>Title</h2>
+  </div>
+</section>
+
+<section>
+  <div class="wrapper_small">
+    <h1>Lorem ipsum dolor sit amet consectetur adipiscing elit</h1>
+    <p>In pretium, velit at sollicitudin iaculis, purus lectus tempor orci, non fermentum lectus ipsum ac ligula. Duis ullamcorper urna ipsum, quis commodo dui pretium nec. Nunc eget mi id risus ullamcorper volutpat. Maecenas scelerisque, risus id sodales convallis, leo nunc dictum enim, at faucibus dui ex ac velit. Vestibulum in hendrerit nibh. Mauris aliquet posuere velit, sit amet mollis justo placerat eget. Quisque posuere, quam eget gravida venenatis, odio massa volutpat magna, vel interdum dui velit et erat. Aliquam id mauris sagittis, varius mi eu, imperdiet nibh. Donec ut arcu non nisl fermentum sagittis.</p>
+    <p><strong>Ut id leo id risus pretium vestibulum.</strong></p>
+        <ul class="numbers">
+      <li class="anime">
+        <h3><span class="count" data-number="575">575</span><sup>%</sup></h3>
+        <span>of forecast<br>revenue</span>
+      </li>
+      <li class="anime">
+        <h3><span class="count" data-number="1991">1991</span><sup>%</sup></h3>
+        <span>return on<br>investment</span>
+      </li>
+    </ul>
+  </div>
+  <div class="wrapper center">
+
+    <div class="one_colunm flex">
+      <img class="arrow" id="prev" src="{{ site.locations.images }}arrow_left.svg" alt="arrow left">
+        <div class="anime carouselbox">
+          <img src="{{ site.locations.images }}ipad.png" class="ipad" alt="">
+          <ul class="content">
+            <li><img src="{{ site.locations.images }}lexus_edm01.jpg" alt="2"></li>
+            <li><img src="{{ site.locations.images }}lexus_edm02.jpg" alt="2"></li>
+            <li><img src="{{ site.locations.images }}lexus_edm03.jpg" alt="3"></li>
+            <li><img src="{{ site.locations.images }}lexus_edm04.jpg" alt="4"></li>
+            <li><img src="{{ site.locations.images }}lexus_edm05.jpg" alt="5"></li>
+          </ul>
+        </div>
+      <img class="arrow" id="next" src="{{ site.locations.images }}arrow_right.svg" alt="arrow right">
+    </div>    
+    <div class="two_colunm">
+      <figure class="anime">
+        <figcaption class="nomargin">Another work</figcaption>
+      </figure>
+      <figure class="anime">
+        <figcaption class="nomargin">Another work</figcaption>
+      </figure>    
+    </div>  
+
+  </div>
+
+</section>
+
+<section class="pagination">
+  <div class="wrapper">
+    <ul>
+      <li>
+        <a href="#">
+          <img id="left" src="{{ site.locations.images }}arrow_left.svg" alt="arrow left">
+          <span>Previus</span>
+        </a>
+      </li>
+      <li class="allitems">
+        <a href="/#work">
+        <span>All Items</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img id="right" src="{{ site.locations.images }}arrow_right.svg" alt="arrow right">
+          <span>Next</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+{% if page.jsarr %}
+  {% for work in page.jsarr %}
+  <script src='{{ work }}' type="text/javascript"></script>
+  {% endfor %}
+{% endif %}

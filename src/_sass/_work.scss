@@ -1,0 +1,233 @@
+main {
+  section {
+    &.work_header {
+      padding: 0;
+      height: 40vh;
+      min-height: 150px;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url($images-location+'data_header.jpg');    
+      @media only screen and (min-width: $on-mobile) {
+        min-height: 500px;
+      }
+      img {
+        height: 50px;
+        margin-bottom: 0.5em;
+        @media only screen and (min-width: $on-mobile) {
+          height: 85px;
+        }
+      }
+      h2 {
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 4px;
+      }      
+    }
+    .flex {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-content: center;
+      .arrow {
+        cursor: pointer;
+        width: 20px;
+        @media only screen and (min-width: $on-tablet) {
+          width: 30px;
+        }
+        @media only screen and (min-width: $on-desktop) {
+          width: 40px;
+        }
+      }
+    }
+
+    .one_colunm {
+      padding: 2em 0;
+      .video {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        span{
+          display: block;
+          margin: 2em;
+          font-size: 15px;
+          @media only screen and (min-width: $on-mobile) {
+            font-size: $mobile-font-size;
+          }
+        }
+      }
+    }
+
+    .two_colunm {
+      padding: 1em 0;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-content: center;
+      .video {
+        position: relative;
+        width: 100%;
+        margin: 1em;
+        text-align: center;
+        span{
+          display: block;
+          margin: 2em;
+          font-size: 15px;
+          @media only screen and (min-width: $on-mobile) {
+            font-size: $mobile-font-size;
+          }
+        }
+        @media only screen and (min-width: $on-mobile) {
+          width: 45%;
+        }
+      }
+    }
+
+    .numbers {
+      margin: 2em 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-between;
+      align-content: center;
+      @media only screen and (min-width: $on-mobile) {
+        flex-flow: row wrap;
+      }
+      li {
+        text-align: center;
+        background: $dark;
+        color: white;
+        width: 98%;
+        margin: 1em 0;
+        padding-bottom: 1em;
+        @media only screen and (min-width: $on-mobile) {
+          margin: 0;
+          width: 49%;
+        }
+        h3 {
+            color: inherit;
+          span {
+            color: inherit;
+            font-family: $base-font-family;
+            font-weight: 700;
+            font-size: 55px;
+            line-height: 60px;
+            letter-spacing: 2px;
+            @media only screen and (min-width: $on-mobile) {
+              font-size: 70px;
+              line-height: 80px;
+            }
+
+          }
+        }
+        sup {
+          font-size: 28px;
+          @media only screen and (min-width: $on-mobile) {
+            font-size: 38px;
+          }
+        }
+        span {
+          font-family: $base-font-family;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 18px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          @media only screen and (min-width: $on-mobile) {
+            font-size: 23px;
+          }
+        }
+      }
+    }
+  }
+  .pagination {
+    background: white;
+    padding: 2vw 0;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+      li {
+        flex: 1;
+      }
+      .allitems {
+        flex: 2;
+        width: 38px;
+        height: 38px;
+        background: url($images-location+'all_items.svg') no-repeat center center;
+        margin-left: 0;
+        transition: all 0.3s ease-out;
+        a {
+          display: block;
+          width: 180px;
+          height: 38px;
+          cursor: pointer;
+          margin: 0 auto;
+        }
+        span{
+          text-indent: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        &:hover{
+          background-image: url($images-location+'all_items_rollover.svg');
+        }
+      }
+      a {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+        span{
+          display: none;
+          color: $dark;
+          text-decoration: none;
+          transition: all 0.3s ease-in-out;
+          @media only screen and (min-width: $on-mobile) {
+            display: flex;
+          }
+        }
+        img {
+          width: 20px;
+          margin: 0 20px;
+          transition: all 0.3s ease-in-out;
+        }
+        &:hover {
+          span{
+            color: $brand-color;
+          }          
+          img[id="right"] {
+            margin: 0 0 0 40px;
+          }
+          img[id="left"] {
+            margin: 0 40px 0 0 ;
+          }
+        }        
+      }
+      li:last-child{
+        a {
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
+
+/* ANIMATIONS */ 
+
+@keyframes slideup{
+  0% {background-position: top center}
+  30% {background-position: bottom center}
+  60% {background-position: bottom center}
+  90% {background-position: top center}
+}
