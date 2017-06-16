@@ -1,6 +1,6 @@
 variables:
-  BUCKET_STAGING: staging.lidaaustralia.com.au
-  BUCKET_LIVE: lidaaustralia.com.au
+  BUCKET_STAGING: # link to staging bucket
+  BUCKET_LIVE: # link to live bucket
 
 stages:
   - deploy_staging
